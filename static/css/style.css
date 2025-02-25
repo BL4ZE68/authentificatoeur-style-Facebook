@@ -1,0 +1,131 @@
+:root {
+    --fb-blue: #1877f2;
+    --fb-green: #42b72a;
+    --fb-gray: #f0f2f5;
+}
+
+body {
+    background-color: var(--fb-gray);
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+}
+
+.navbar-brand {
+    color: var(--fb-blue) !important;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.login-container {
+    max-width: 1000px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.login-left {
+    flex: 1;
+    padding-right: 32px;
+}
+
+.login-left h1 {
+    font-size: 3.5rem;
+    color: var(--fb-blue);
+    margin-bottom: 20px;
+}
+
+.login-left p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.login-form-container {
+    flex: 0 0 396px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 20px;
+}
+
+.form-control {
+    height: 50px;
+    font-size: 17px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    margin-bottom: 12px;
+}
+
+.form-control:focus {
+    border-color: var(--fb-blue);
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.btn-login {
+    background-color: var(--fb-blue);
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 12px 16px;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.btn-register {
+    background-color: var(--fb-green);
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 12px 16px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 0;
+}
+
+.alert {
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.alert-success {
+    background-color: #e7f3ff;
+    border-color: #1877f2;
+    color: #1877f2;
+}
+
+.alert-error {
+    background-color: #ffebe9;
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
