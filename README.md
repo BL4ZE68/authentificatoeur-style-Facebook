@@ -50,7 +50,7 @@ mkdir -p static/uploads
 python app.py
 ```
 
-1. Ouvrez votre navigateur à l'adresse : `http://localhost:5000`
+5. Ouvrez votre navigateur à l'adresse : `http://localhost:5000`
 
 ## Structure du projet
 
