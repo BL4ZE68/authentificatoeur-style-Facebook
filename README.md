@@ -26,23 +26,27 @@ Un réseau social inspiré de Facebook, développé avec Flask.
 ## Installation
 
 1. Clonez le repository :
-```bash
+
+```shell
 git clone https://github.com/votre-username/social-network-flask.git
 cd social-network-flask
 ```
 
 2. Installez les dépendances :
-```bash
+
+```shell
 pip install -r requirements.txt
 ```
 
 3. Créez les dossiers nécessaires :
-```bash
+
+```shell
 mkdir -p static/uploads
 ```
 
 4. Lancez l'application :
-```bash
+
+```shell
 python app.py
 ```
 
@@ -50,7 +54,7 @@ python app.py
 
 ## Structure du projet
 
-```
+```plaintext
 social-network-flask/
 ├── app.py                 # Application Flask principale
 ├── requirements.txt       # Dépendances Python
