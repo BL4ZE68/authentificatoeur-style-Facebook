@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Notifications</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    {% for notification in notifications %}
+                    <div class="list-group-item {% if not notification.read %}list-group-item-primary{% endif %}">
+                        <div class="d-flex align-items-center">
+                            {% if notification.type == 'like' %}
+                            <div class="notification-icon bg-primary text-white rounded-circle p-2 me-3">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            {% elif notification.type == 'comment' %}
+                            <div class="notification-icon bg-success text-white rounded-circle p-2 me-3">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            {% elif notification.type == 'friend_request' %}
+                            <div class="notification-icon bg-info text-white rounded-circle p-2 me-3">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            {% endif %}
+                            <div class="flex-grow-1">
+                                <p class="mb-1">{{ notification.content }}</p>
+                                <small class="text-muted">{{ notification.created_at.strftime('%d %B à %H:%M') }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="list-group-item text-center text-muted">
+                        <p class="mb-0">Aucune notification</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-group-item-primary {
+    position: relative;
+}
+
+.list-group-item-primary::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #0d6efd;
+}
+</style>
+{% endblock %}

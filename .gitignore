@@ -21,17 +21,23 @@ wheels/
 .installed.cfg
 *.egg
 
+# Virtual Environment
+venv/
+ENV/
+env.bak/
+venv.bak/
+
 # Flask
 instance/
 .webassets-cache
 
-# Environnement virtuel
-venv/
-ENV/
-
-# Base de données
+# SQLite
 *.db
-*.sqlite
+*.sqlite3
+
+# Uploaded files
+static/uploads/*
+!static/uploads/.gitkeep
 
 # IDE
 .idea/
